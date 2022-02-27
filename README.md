@@ -24,7 +24,9 @@ This is sort of a crappy version of [NEAT](https://en.wikipedia.org/wiki/Neuroev
 ## Understanding the Network's solution
 
 The best network seems to be one with all positive weights: 
-![A good solution]<img src=https://raw.githubusercontent.com/toronyx/balance-the-pencil/main/pictures/good_solution.png width="400">
+
+<img src=https://raw.githubusercontent.com/toronyx/balance-the-pencil/main/pictures/good_solution.png width="400">
+
 -   The angle is positively associated with movement, i.e. if the pencil tilts to the right, the network moves to the right
 -   The position of the tip is positively associated with movement. This one is more subtle, if the position of the tip is near the right side of the screen, the network actually moves to the right faster. This is so that the pencil starts tilting to the left, allowing the pencil to be moved back to the centre. Think about it, if the tip of the pencil slowed down as it moved towards the edge, the pencil would fall forwards.
 -   The speed is very similar, if the pencil is travelling towards the edge too fast, the network tries to move the tip ahead of the pencil, so the pencil tilts back. Try balancing a pencil and you may understand better.
