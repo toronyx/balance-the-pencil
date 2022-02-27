@@ -125,7 +125,7 @@ def NEAT(best_ai, ai):
     parents_index = np.random.permutation(range(len(best_ai)))[0:2]
     mother = best_ai[parents_index[0]]
     father = best_ai[parents_index[1]]
-    r = np.random.uniform(0,1,4)
+    r = np.random.uniform(0,0.6667,4) # such that weight stays the same on average
     new_weights = (r[0]*np.asarray(father['weights'])
                    + r[1]*np.asarray(mother['weights'])
                    + np.random.normal(0,2,ai.weights[0].shape))
