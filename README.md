@@ -4,7 +4,7 @@ A simple Neural Network demonstration.
 
 ## The game itself
 
-The aim is to balance the pencil as long as possible. If the pencil falls, or goes of screen, you lose
+The aim is to balance the pencil as long as possible. If the pencil falls, or goes of screen, you lose.
 
 The physics is two main things: rotation due to gravity, and rotation due to tip movement. There is also some light damping/ air resistance but it doesn't seem to have a major effect and probably doesn't need including if this project were made again.
 
