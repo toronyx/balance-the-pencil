@@ -21,7 +21,19 @@ Each time the pencil falls, the network is randomized and the game restarted. Th
 
 This is sort of a crappy version of [NEAT](https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies), which mimics how living things evolve. The idea is if we keep choosing the most successful networks to create our new networks, our best networks will converge on the best "solution" to the problem of balancing the pencil.
 
+## Understanding the Network's solution
+
+The best network seems to be one with all positive weights: 
+
+<img src=https://raw.githubusercontent.com/toronyx/balance-the-pencil/main/pictures/good_solution.png width="400">
+
+-   The angle is positively associated with movement, i.e. if the pencil tilts to the right, the network moves to the right.
+-   The position of the tip is positively associated with movement. This one is more subtle, if the position of the tip is near the right side of the screen, the network actually moves to the right faster. This is so that the pencil starts tilting to the left, allowing the pencil to be moved back to the centre. Think about it, if the tip of the pencil slowed down as it moved towards the edge, the pencil would fall forwards.
+-   The speed is very similar, if the pencil is travelling towards the edge too fast, the network tries to move the tip ahead of the pencil, so the pencil tilts back. Try balancing a pencil and you may understand better.
+
 ## Videos
+
+Below are some videos of the game/network in action!
 
 ### Gameplay, i.e. playing the game as a human.
 
@@ -42,13 +54,3 @@ https://user-images.githubusercontent.com/83616452/194716707-742fdc75-3f3c-4b78-
 Here I have sped it up so we can see how it does over a longer period of time:
 
 https://user-images.githubusercontent.com/83616452/194716442-1d4d1f73-1b32-4fc8-80de-59e8f5c095ec.mp4
-
-## Understanding the Network's solution
-
-The best network seems to be one with all positive weights: 
-
-<img src=https://raw.githubusercontent.com/toronyx/balance-the-pencil/main/pictures/good_solution.png width="400">
-
--   The angle is positively associated with movement, i.e. if the pencil tilts to the right, the network moves to the right.
--   The position of the tip is positively associated with movement. This one is more subtle, if the position of the tip is near the right side of the screen, the network actually moves to the right faster. This is so that the pencil starts tilting to the left, allowing the pencil to be moved back to the centre. Think about it, if the tip of the pencil slowed down as it moved towards the edge, the pencil would fall forwards.
--   The speed is very similar, if the pencil is travelling towards the edge too fast, the network tries to move the tip ahead of the pencil, so the pencil tilts back. Try balancing a pencil and you may understand better.
