@@ -21,6 +21,28 @@ Each time the pencil falls, the network is randomized and the game restarted. Th
 
 This is sort of a crappy version of [NEAT](https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies), which mimics how living things evolve. The idea is if we keep choosing the most successful networks to create our new networks, our best networks will converge on the best "solution" to the problem of balancing the pencil.
 
+## Videos
+
+### Gameplay, i.e. playing the game as a human.
+
+https://user-images.githubusercontent.com/83616452/194716412-c07e672c-fdb6-4a9d-aeff-35ce604b94ef.mp4
+
+### Randomly generated networks attempting to balance the pencil
+
+You can see the nodes of the network, which change colour depending on their value. The input nodes are the "observations" about the game world, and the output nodes are the model's "decisions". The video has been sped up a bit so we can see more attempts.
+
+https://user-images.githubusercontent.com/83616452/194716439-8bc1a183-cb57-4152-bf82-7028318ea8d1.mp4
+
+## A successful network
+
+After randomly generating over 100 networks, the model has started to converge on a good solution
+
+https://user-images.githubusercontent.com/83616452/194716707-742fdc75-3f3c-4b78-a3bd-6c8b8e057c7a.mp4
+
+Here I have sped it up so we can see how it does over a longer period of time:
+
+https://user-images.githubusercontent.com/83616452/194716442-1d4d1f73-1b32-4fc8-80de-59e8f5c095ec.mp4
+
 ## Understanding the Network's solution
 
 The best network seems to be one with all positive weights: 
